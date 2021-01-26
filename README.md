@@ -7,6 +7,9 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+- The dataset provided in this project is UCI Bank Marketing Dataset. This dataset contains information about financial and personal details of customers like job, martial status, education, salary, etc. The y colum or the labels indicates whether the customer subscribed to the fixed term deposit or not. This depicts that this is a classifiacation broblem with two classes or a binary classification problem.
+
+- For this problem we used two approaches HyperDrive and AutoML. Finally we compared the performance.
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
