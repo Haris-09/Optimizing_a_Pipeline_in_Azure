@@ -52,7 +52,7 @@ Termination policy helps to save time by stopping runs in case of poor performan
 
 Azure ML creates multiple pipelines in parallel which try on different algorithms and parameters. It iterates through ML algorithms paired with feature selections, and each iteration produces a model with a training score. The higher the score, the better the fitting the model is. The process will stop once the exit criteria defined is hit.
 
-The models attempted via AutoML were RandomForests,BoostedTrees,XGBoost,LightGBM,SGDClassifier,VotingEnsemble etc. AutoML utilized various information preprocessing standardization like Standard Scaling, Min Max Scaling, Sparse Normalizer, MaxAbsScaler etc. The best model selected by the AutoML is *StandardScalerWrapper LightGBM* which gives an accuracy of *0.90434*
+The models attempted via AutoML were RandomForests,BoostedTrees,XGBoost,LightGBM,SGDClassifier,VotingEnsemble etc. AutoML utilized various information preprocessing standardization like Standard Scaling, Min Max Scaling, Sparse Normalizer, MaxAbsScaler etc. The best model selected by the AutoML is *VotingEnsemble* which gives an accuracy of *0.9171*.
 
 ![Alt text](Screenshots/best-automlrun.JPG?raw=true "best automlrun")
 
@@ -62,7 +62,7 @@ The models attempted via AutoML were RandomForests,BoostedTrees,XGBoost,LightGBM
 
 ## Pipeline comparison
 
-- Both in HyperDrive and AutoML i used accuracy as a primary metric. Hyperdrive uses logistic regression and gave an accuracy of *0.9144157814871017*. While the AutoML chosen best model is *StandardScalerWrapper LightGBM* which gives an accuracy of *0.90434*. Both gave around the same results there not that much difference.
+- Both in HyperDrive and AutoML i used accuracy as a primary metric. Hyperdrive uses logistic regression and gave an accuracy of *0.9144157814871017*. While the AutoML chosen best model is *VotingEnsemble* which gives an accuracy of *0.9171*. Both gave around the same results there not that much difference.
 
 - The advantage that the AutoML have is that it tests many configurations and algorithms at the same time, but hyperdrive is limited to the configuration we provide. AutoML pipeline is more easy to setup and lot less configurations are required. One other advantage of AutoML is feature engineering applied automatically.
 
