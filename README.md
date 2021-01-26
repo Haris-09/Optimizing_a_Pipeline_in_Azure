@@ -11,6 +11,8 @@ This model is then compared to an Azure AutoML run.
 
 - For this problem we used two approaches HyperDrive and AutoML. Finally we compared the performance.
 
+![Alt text](Screenshots/workflow.png?raw=true "Workflow")
+
 **the solution:**
 - Using the HyperDrive i got an accuracy of *0.9144157814871017*
 - Using the AutoML the best model is *StandardScalerWrapper LightGBM* which gives an accuracy of *0.90434*
