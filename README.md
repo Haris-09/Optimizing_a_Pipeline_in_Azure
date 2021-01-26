@@ -6,12 +6,14 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+**the problem statement:**
 - The dataset provided in this project is UCI Bank Marketing Dataset. This dataset contains information about financial and personal details of customers like job, martial status, education, salary, etc. The y colum or the labels indicates whether the customer subscribed to the fixed term deposit or not. This depicts that this is a classifiacation broblem with two classes or a binary classification problem.
 
 - For this problem we used two approaches HyperDrive and AutoML. Finally we compared the performance.
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+**the solution:**
+- Using the HyperDrive i got an accuracy of *0.9144157814871017*
+- Using the AutoML the best model is *StandardScalerWrapper LightGBM* which gives an accuracy of *0.90434*
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
