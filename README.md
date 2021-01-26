@@ -15,7 +15,7 @@ This model is then compared to an Azure AutoML run.
 
 **the solution:**
 - Using the HyperDrive i got an accuracy of *0.9144157814871017*
-- Using the AutoML the best model is *StandardScalerWrapper LightGBM* which gives an accuracy of *0.90434*
+- Using the AutoML the best model is *VotingEnsemble* which gives an accuracy of *0.9171*
 
 ## Scikit-learn Pipeline
 **The pipeline architecture**
@@ -53,12 +53,6 @@ Termination policy helps to save time by stopping runs in case of poor performan
 Azure ML creates multiple pipelines in parallel which try on different algorithms and parameters. It iterates through ML algorithms paired with feature selections, and each iteration produces a model with a training score. The higher the score, the better the fitting the model is. The process will stop once the exit criteria defined is hit.
 
 The models attempted via AutoML were RandomForests,BoostedTrees,XGBoost,LightGBM,SGDClassifier,VotingEnsemble etc. AutoML utilized various information preprocessing standardization like Standard Scaling, Min Max Scaling, Sparse Normalizer, MaxAbsScaler etc. The best model selected by the AutoML is *VotingEnsemble* which gives an accuracy of *0.9171*.
-
-![Alt text](Screenshots/best-automlrun.JPG?raw=true "best automlrun")
-
-![Alt text](Screenshots/best-automlrun-algorithm.JPG?raw=true "best automlrun algorithm")
-
-![Alt text](Screenshots/best-automlrun-confusionmatrix.JPG?raw=true "best automlrun confusionmatrix")
 
 ## Pipeline comparison
 
