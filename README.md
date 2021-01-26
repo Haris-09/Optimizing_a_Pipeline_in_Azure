@@ -21,6 +21,7 @@ This model is then compared to an Azure AutoML run.
 **The pipeline architecture**
 - First we start with the train.py script. this script is used for data preperation. first we get the dataset from the given URL using TabularDatasetFactory. Then we clean the data using clean_data function which uses one hot encoding method. After that splited the data into training and testing set. The script uses logistic regression as a classification alogrithm. Logistic Regression has two arguments regularization strength and no of iterations to converge by default they are defined as 1.0 and 100 respectively.
 - Then i created a Standard_D2_V2 Compute Instance named Compute-CPU to run the notebook.
+![Alt text](Screenshots/standard_D2_V2.JPG?raw=true "Compute Instance")
 - In the notebook we first initializes the exsisting worksape object and created a new experiment to track all the runs in the workspace.
 - Then created a Standard_D2_V2 compute cluster with 4 nodes to train the model using the ComputeTarget.
 - Next part is the hyperparameter selection and specifying a policy. The two hyperparameters used are C regulizaion strength and max_iter maximum number of iterations to converge for the logistic regression algorithm. I used random parameter sampling to sample over a discrete set of values. the parameter search space used for C is (0.002, 0.02, 0.2, 2.0) and max_iter is (100, 200, 300, 500). I used the Bandit policy. Bandit terminates runs where the primary metric is not within the specified slack factor/slack amount compared to the best performing run.
